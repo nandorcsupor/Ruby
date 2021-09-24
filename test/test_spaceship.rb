@@ -16,5 +16,15 @@ class TestSpaceship < Minitest::Unit::TestCase
         @ship.probes += [Probe.new, Probe.new]
         assert_equal(2, @ship.probes.size)
     end
+
+    def test_instance
+        assert_instance_of(Spaceship, @ship)
+    end
+
+    def test_exception
+        assert_raises {nil.name}
+    end
+
+    
 end
 
